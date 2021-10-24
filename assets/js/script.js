@@ -21,3 +21,14 @@ function displaySchedule() {
     submitBtnEl.on("click", changeSchedule);
 }
 
+function changeSchedule(event) {
+    var checkHr = $(this).parent().attr("data-id");
+    var editTasks = $(this).siblings(".description").val();
+    localStorage.setItem(checkHr, editTasks);
+}
+
+$(document).ready( () => {
+    displaySchedule();
+    currentDayEl.innerHTML = currentDate;
+    currentDayEl.append(currentDate);
+});
