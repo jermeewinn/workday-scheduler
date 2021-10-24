@@ -11,11 +11,11 @@ function displaySchedule() {
 
         $(this).children(".description").val(localStorage.getItem(currBlockTime));
 
-        if(currentHr == currBlockTime) {$(this).children("textarea").addClass(".present");}
+        if(currentHr == currBlockTime) {$(this).children("textarea").addClass("present");}
 
-        if(currentHr > currBlockTime) {$(this).children("textarea").addClass(".past");}
+        if(currentHr > currBlockTime) {$(this).children("textarea").addClass("past");}
 
-        if(currentHr < currBlockTime) {$(this).children("textarea").addClass(".future");}
+        if(currentHr < currBlockTime) {$(this).children("textarea").addClass("future");}
     });
 
     submitBtnEl.on("click", changeSchedule);
